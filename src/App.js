@@ -5,6 +5,7 @@ import ProfileDetail from './components/ProfileDetail';
 import DashboardMenus from './components/DashboardMenus';
 import PlanUpgrade from './components/PlanUpgrade';
 import TotalRevenue from './components/TotalRevenue';
+import TravelCard from './components/TravelCard';
 
 export default function App() {
   return (
@@ -30,6 +31,7 @@ export default function App() {
       </Grid>
 
       <TotalRevenue />
+      <TravelCard />
     </Box>
   );
 }

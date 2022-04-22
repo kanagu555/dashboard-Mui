@@ -7,6 +7,7 @@ import {
   ListItem,
   ListItemIcon,
   ListItemText,
+  Avatar,
 } from '@mui/material';
 import FolderOpenOutlinedIcon from '@mui/icons-material/FolderOpenOutlined';
 import MailOutlineIcon from '@mui/icons-material/MailOutline';
@@ -14,18 +15,30 @@ import CalendarTodayOutlinedIcon from '@mui/icons-material/CalendarTodayOutlined
 import AutoGraphIcon from '@mui/icons-material/AutoGraph';
 import InsertDriveFileOutlinedIcon from '@mui/icons-material/InsertDriveFileOutlined';
 
+const iconStyle = {
+  bgcolor: 'black',
+  border: 4,
+  borderRadius: '5px',
+  width: '1.5rem',
+  height: '1.5rem',
+};
+
 const DashboardMenus = () => {
   return (
-    <Box sx={{display: 'block'}}>
-      <Card sx={{
+    <Box sx={{ display: 'block' }}>
+      <Card
+        sx={{
           display: 'flex',
           borderRadius: '2rem',
-        }}>
+        }}
+      >
         <CardContent>
           <List>
             <ListItem>
               <ListItemIcon>
-                <FolderOpenOutlinedIcon />
+                <Box sx={{...iconStyle}}>
+                  <FolderOpenOutlinedIcon sx={{color: 'white'}}/>
+                </Box>
               </ListItemIcon>
               <ListItemText>Dashboard</ListItemText>
             </ListItem>
