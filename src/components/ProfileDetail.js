@@ -10,7 +10,7 @@ const ProfileDetail = () => {
         }}
       >
         <CardContent>
-          <Typography variant="h5">Hira R.</Typography>
+          <Typography sx={{fontWeight: 'bold'}} variant="h5">Hira R.</Typography>
           <Typography color="text.secondary" gutterBottom>
             UX/UI Designer
           </Typography>

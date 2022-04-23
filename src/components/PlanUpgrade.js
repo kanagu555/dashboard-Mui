@@ -21,7 +21,7 @@ const PlanUpgrade = () => {
         }}
       >
         <CardContent>
-          <Typography color="white" variant="h5">
+          <Typography sx={{fontWeight: 'bold'}} color="white" variant="h5">
             Go Pro
           </Typography>
           <Typography color="white" px={2}>
