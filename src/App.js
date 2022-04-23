@@ -6,6 +6,7 @@ import DashboardMenus from './components/DashboardMenus';
 import PlanUpgrade from './components/PlanUpgrade';
 import TotalRevenue from './components/TotalRevenue';
 import TravelCard from './components/TravelCard';
+import HotelCard from './components/HotelCard';
 
 export default function App() {
   return (
@@ -29,9 +30,16 @@ export default function App() {
           </Grid>
         </Grid>
       </Grid>
-
-      <TotalRevenue />
-      <TravelCard />
+      <Grid container px={4} py={3} columnSpacing={2}>
+      <Grid container
+            rowSpacing={2} 
+            sx={{ display: 'grid' }}>
+      <Grid item><TotalRevenue /></Grid>
+      <Grid item><TravelCard />  <HotelCard /></Grid>
+     
+     
+      </Grid>
+      </Grid>
     </Box>
   );
 }
