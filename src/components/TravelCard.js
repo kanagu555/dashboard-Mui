@@ -66,9 +66,9 @@ const TravelCard = () => {
             <Button
               variant="outlined"
               size="small"
-              sx={{ borderRadius: '2rem', borderColor: '#D2D6E1', textTransform:'none' }}
+              sx={{ borderRadius: '2rem', borderColor: '#D2D6E1', textTransform:'none', width: 0 }}
             >
-              <Typography sx={{fontSize: 12, minWidth: 0}}variant="body">Transport</Typography>
+              <Typography sx={{fontSize: 12}}variant="body">Transport</Typography>
               
             </Button>
             

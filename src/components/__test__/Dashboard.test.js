@@ -12,3 +12,4 @@ it('should check dashboard link', () => {
     fireEvent.click(queryByTitle('dashboardLink'))
     expect(screen.getByRole('alert')).getByText('welcome')
 })
+
