@@ -7,6 +7,7 @@ import PlanUpgrade from './components/PlanUpgrade';
 import TotalRevenue from './components/TotalRevenue';
 import TravelCard from './components/TravelCard';
 import HotelCard from './components/HotelCard';
+import Calender from './components/Calender';
 
 export default function App() {
   return (
@@ -38,6 +39,7 @@ export default function App() {
             sx={{ display: 'grid' }}>
       <Grid item><TotalRevenue /></Grid>
       <Grid item><TravelCard />  <HotelCard /></Grid>
+      <Grid item><Calender /></Grid>
       </Grid>
       </Grid>
       </Grid>

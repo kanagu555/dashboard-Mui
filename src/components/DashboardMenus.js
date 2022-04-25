@@ -7,7 +7,7 @@ import {
   ListItem,
   ListItemIcon,
   ListItemText,
-  Avatar,
+  Link,
 } from '@mui/material';
 import FolderOpenOutlinedIcon from '@mui/icons-material/FolderOpenOutlined';
 import MailOutlineIcon from '@mui/icons-material/MailOutline';
@@ -40,7 +40,7 @@ const DashboardMenus = () => {
                   <FolderOpenOutlinedIcon sx={{color: 'white'}}/>
                 </Box>
               </ListItemIcon>
-              <ListItemText>Dashboard</ListItemText>
+              <ListItemText><Link onClick={() => {alert('welcome')}} color="inherit" sx={{cursor:"pointer", textDecoration: 'none'}}>Dashboard</Link></ListItemText>
             </ListItem>
             <ListItem>
               <ListItemIcon>
