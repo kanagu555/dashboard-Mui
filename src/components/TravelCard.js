@@ -10,6 +10,16 @@ import {
   Stack,
 } from '@mui/material';
 
+const buttonStyle = {
+  borderRadius: '2rem', 
+  borderColor: '#D2D6E1', 
+  textTransform:'none', 
+  margineLeft: '7px', 
+  width: 0,
+  ml: 1
+}
+
+
 const TravelCard = () => {
   return (
     <Box sx={{display: 'inline-block'}}>
@@ -57,7 +67,7 @@ const TravelCard = () => {
             <Button
               variant="outlined"
               size="small"
-              sx={{ borderRadius: '2rem', borderColor: '#D2D6E1', textTransform:'none' }}
+              sx={{ ...buttonStyle }}
             >
               <Typography sx={{fontSize: 12}} variant="body">Trip</Typography>
             </Button>
@@ -66,7 +76,7 @@ const TravelCard = () => {
             <Button
               variant="outlined"
               size="small"
-              sx={{ borderRadius: '2rem', borderColor: '#D2D6E1', textTransform:'none', width: 0 }}
+              sx={{ ...buttonStyle }}
             >
               <Typography sx={{fontSize: 12}}variant="body">Transport</Typography>
               
