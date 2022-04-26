@@ -1,19 +1,15 @@
-import React from 'react';
+import React, {useState} from 'react';
 import {
   Box,
   Card,
   CardContent,
   Typography,
   Switch,
-  AvatarGroup,
-  Button,
-  Stack,
 } from '@mui/material';
 
 const switchButton = {
   color: '#3827B3',
   alignSelf: 'center',
-  height: '0.rem',
 };
 
 const dateStyle = {
@@ -23,12 +19,31 @@ const dateStyle = {
   // alignItems: 'center'
 };
 
-const dateStyleItem = {
-  // backgroundColor: '#e25668',
-  backgroundColor: 'white',
+const dateStyleItemCommon = {
   boxShadow: '0 0 3px 1px #D2D6E1',
   borderRadius: '1rem',
+  m: '20px',
+  display: 'flex',
+  justifyContent: 'center',
+  alignItems: 'center',
+  flexDirection: 'column',
+  p: '20px',
+  cursor: 'pointer'
+}
+
+const dateStyleItemSelected = {
+  backgroundColor: '#e25668',
+  color: 'white',
+}
+
+const dateStyleItemNotSelected = {
+  backgroundColor: 'white',
   color: 'black',
+}
+
+const dateStyleItem = {
+  boxShadow: '0 0 3px 1px #D2D6E1',
+  borderRadius: '1rem',
   m: '20px',
   display: 'flex',
   justifyContent: 'center',
@@ -39,7 +54,7 @@ const dateStyleItem = {
 
 const dateInnerStyle = {
   fontWeight: 'bold',
-  fontSize: '20px'
+  fontSize: '20px',
 };
 
 const monthStyle = {
@@ -56,8 +71,16 @@ const dateStyleItems = {
 };
 
 const Calender = () => {
+
+  const [select, setSelect] = useState({})
+   
+  const handleChange = () => {
+    setSelect({...dateStyleItemCommon, ...dateStyleItemSelected})
+  }
+
+
   return (
-    <Box sx={{ display: 'inline-block', p: '20px', }}>
+    <Box sx={{ display: 'inline-block', p: '20px' }}>
       <Card
         sx={{
           borderRadius: '2rem',
@@ -69,8 +92,13 @@ const Calender = () => {
           </Typography>
           <Switch defaultChecked sx={{ ...switchButton }}></Switch>
         </CardContent>
+
         <CardContent sx={{ ...dateStyle }}>
-          <Box sx={{ ...dateStyleItem, backgroundColor: '#e25668', color: 'white' }}>
+          <Box 
+            sx={{
+              ...dateStyleItemCommon, ...select
+            }} onClick = {handleChange}
+          >
             <Typography>
               <Box sx={{ ...dateInnerStyle }}>12</Box>
             </Typography>
@@ -78,7 +106,7 @@ const Calender = () => {
               <Box sx={{ ...monthStyle }}>June</Box>
             </Typography>
           </Box>
-          <Box sx={{ ...dateStyleItem }}>
+          <Box sx={{  ...dateStyleItemCommon }}>
             <Typography>
               <Box sx={{ ...dateInnerStyle }}>18</Box>
             </Typography>
@@ -118,6 +146,7 @@ const Calender = () => {
               <Box sx={{ ...monthStyle }}>July</Box>
             </Typography>
           </Box>
+          
         </CardContent>
       </Card>
     </Box>
