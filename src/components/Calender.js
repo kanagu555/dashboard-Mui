@@ -1,11 +1,5 @@
-import React, {useState} from 'react';
-import {
-  Box,
-  Card,
-  CardContent,
-  Typography,
-  Switch,
-} from '@mui/material';
+import React, { useState } from 'react';
+import { Box, Card, CardContent, Typography, Switch } from '@mui/material';
 
 const switchButton = {
   color: '#3827B3',
@@ -15,8 +9,9 @@ const switchButton = {
 const dateStyle = {
   display: 'flex',
   flexWrap: 'wrap',
-  // justifyContent: 'center',
-  // alignItems: 'center'
+  display: 'flex',
+  justifyContent: 'space-between',
+  alignItems: 'center',
 };
 
 const dateStyleItemCommon = {
@@ -28,18 +23,18 @@ const dateStyleItemCommon = {
   alignItems: 'center',
   flexDirection: 'column',
   p: '20px',
-  cursor: 'pointer'
-}
+  cursor: 'pointer',
+};
 
 const dateStyleItemSelected = {
   backgroundColor: '#e25668',
   color: 'white',
-}
+};
 
 const dateStyleItemNotSelected = {
   backgroundColor: 'white',
   color: 'black',
-}
+};
 
 const dateStyleItem = {
   boxShadow: '0 0 3px 1px #D2D6E1',
@@ -71,13 +66,11 @@ const dateStyleItems = {
 };
 
 const Calender = () => {
+  const [select, setSelect] = useState({});
 
-  const [select, setSelect] = useState({})
-   
   const handleChange = () => {
-    setSelect({...dateStyleItemCommon, ...dateStyleItemSelected})
-  }
-
+    setSelect({ ...dateStyleItemCommon, ...dateStyleItemSelected });
+  };
 
   return (
     <Box sx={{ display: 'inline-block', p: '20px' }}>
@@ -94,10 +87,12 @@ const Calender = () => {
         </CardContent>
 
         <CardContent sx={{ ...dateStyle }}>
-          <Box 
+          <Box
             sx={{
-              ...dateStyleItemCommon, ...select
-            }} onClick = {handleChange}
+              ...dateStyleItemCommon,
+              ...select,
+            }}
+            onClick={handleChange}
           >
             <Typography>
               <Box sx={{ ...dateInnerStyle }}>12</Box>
@@ -106,7 +101,7 @@ const Calender = () => {
               <Box sx={{ ...monthStyle }}>June</Box>
             </Typography>
           </Box>
-          <Box sx={{  ...dateStyleItemCommon }}>
+          <Box sx={{ ...dateStyleItemCommon }}>
             <Typography>
               <Box sx={{ ...dateInnerStyle }}>18</Box>
             </Typography>
@@ -146,7 +141,6 @@ const Calender = () => {
               <Box sx={{ ...monthStyle }}>July</Box>
             </Typography>
           </Box>
-          
         </CardContent>
       </Card>
     </Box>

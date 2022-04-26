@@ -8,6 +8,7 @@ import TotalRevenue from './components/TotalRevenue';
 import TravelCard from './components/TravelCard';
 import HotelCard from './components/HotelCard';
 import Calender from './components/Calender';
+import Client from './components/Client';
 
 export default function App() {
   return (
@@ -40,6 +41,10 @@ export default function App() {
       <Grid item><TotalRevenue /></Grid>
       <Grid item><TravelCard />  <HotelCard /></Grid>
       <Grid item><Calender /></Grid>
+      </Grid>
+      <Grid container>
+      <Grid item><Client /> </Grid>
+
       </Grid>
       </Grid>
       </Grid>
