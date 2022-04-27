@@ -7,7 +7,7 @@ const cardTitle = {
   fontWeight: 'bold',
   display: 'flex',
   justifyContent: 'space-between',
-  alignItems: 'center'
+  alignItems: 'center',
 };
 
 const Client = () => {
@@ -18,17 +18,18 @@ const Client = () => {
           borderRadius: '2rem',
         }}
       >
-        <CardContent >
+        <CardContent>
           <Box sx={{ ...cardTitle }}>
-          <SentimentSatisfiedAltIcon sx={{ fontSize: 100 }} />
-          <Typography sx={{ ...cardTitle }} variant="h5">
-            Dear Client 
-          </Typography>
-          <KeyboardArrowDownIcon fontSize="large" />
+            <SentimentSatisfiedAltIcon sx={{ fontSize: 100 }} />
+            <Typography sx={{ ...cardTitle }} variant="h5">
+              Dear Client
+              <KeyboardArrowDownIcon fontSize="large" />
+            </Typography>
+
+            <Typography color="text.secondary">
+              Join our online community. It helps in managing your projects.
+            </Typography>
           </Box>
-          <Typography color="text.secondary">
-            Join our online community. It helps in managing your projects
-          </Typography>
         </CardContent>
       </Card>
     </Box>
